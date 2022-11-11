@@ -21,3 +21,29 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/contacts/63696809802fa2dd326cce27
+
+
+###
+GET https://render-ta-cse.onrender.com/contacts
+
+###
+GET https://render-ta-cse.onrender.com/contacts/636d908878607e65eba7c167
+
+###
+POST https://render-ta-cse.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ashley", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+}
+
+###
+PUT https://render-ta-cse.onrender.com/contacts/636d908878607e65eba7c167 HTTP/1.1
+Content-Type: application/json
+
+{
+   "firstName":"Sarah","lastName":"Birch","email":"amazingwoman@test.com","favoriteColor":"Green","birthday":"12/12/20"
+}
+
+###
+DELETE https://render-ta-cse.onrender.com/contacts/636d908878607e65eba7c167
