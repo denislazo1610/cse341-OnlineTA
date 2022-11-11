@@ -2,6 +2,7 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res, next) => {
+  // #swagger.tags = ['Contacts']
   const result = await mongodb
     .getDb()
     .db("contacts")
@@ -14,6 +15,7 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
+  // #swagger.tags = ['Contacts']
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -27,6 +29,7 @@ const getSingle = async (req, res, next) => {
 };
 
 const createContact = async (req, res) => {
+  // #swagger.tags = ['Contacts']
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -51,6 +54,7 @@ const createContact = async (req, res) => {
 };
 
 const updateContact = async (req, res) => {
+  // #swagger.tags = ['Contacts']
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const contact = {
@@ -78,6 +82,7 @@ const updateContact = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
+  // #swagger.tags = ['Contacts']
   const userId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
